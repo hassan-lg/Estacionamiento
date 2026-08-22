@@ -8,14 +8,32 @@
 
 - En el menú es necesario ingresar un número del 1 al 7 para ejecutar las opciones.
 
-- Si no se ingresara un número o no dentro del rango es necesario volver a ingresar un número para que cumpla la condición.
+- ##### 1. Opción Ingresar vehiculo:
 
-- Entre las opciones están: ingresar un vehiculo, retirar vehiculo, mostrar el estacionamiento, busqueda por placa, ruta más corta entre entrada y salida, muestra de ingresos y opción de salir.
+- Se ingresa el vehiculo con su placa y se ingresa un pago.
 
--  La muestra del estacionamiento enseña los lugares que están libres y cuáles están ocupados en el estacionamiento.
+- ##### 2. Opción retirar un vehiculo:
 
+- Se retira un vehiculo usando el dato de la placa.
 
+- ##### 3. Mostrar estacionamiento:
 
+- Se muestra el mapa del estacionamiento y los lugares disponibles y ocupado en el mapa.
 
+- ##### 4. Buscar vehiculo por placa:
 
+- Si se ingresa la placa se muestra el dato del lugar donde se encuentra el auto.
 
+- ##### 5. Mostrar ruta más corta entre entrada y salida:
+
+- Compara los recorridos posibles para indicar la salida y entrada.
+
+- ##### 6. Mostrar ingresos:
+
+- Muestra el dinero almacenado por los autos.
+
+- ##### 7. Salir:
+
+- Es para cerrar el programa y finalizar la ejecución.
+  
+  
