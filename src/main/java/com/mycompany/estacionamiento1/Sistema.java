@@ -16,7 +16,7 @@ public class Sistema {
     static final double TARIFA = 10.00;
     static final int TOTAL_PERIMETRO = 2 * FILAS + 2 * COLUMNAS - 4;
 
-    // 2. VARIABLES Y MATRICES GLOBALES
+    // Variables de matrices
     static final char[][] tablero = new char[FILAS][COLUMNAS];
     static final String[][] placas = new String[FILAS][COLUMNAS];  
     static double totalIngresos = 0.0; 
@@ -139,11 +139,8 @@ public class Sistema {
                     break;
                     
                 case 5:
-                    System.out.println("--- CÁLCULO DE RUTA MÁS CORTA ---");
-                    int[] filaPerimetro = new int[TOTAL_PERIMETRO];
-                    int[] columnaPerimetro = new int[TOTAL_PERIMETRO];
-                    construirPerimetro(filaPerimetro, columnaPerimetro);
-                    calcularYMostrarRuta(filaPerimetro, columnaPerimetro, filaEntrada, columnaEntrada, filaSalida, columnaSalida);
+                    System.out.println("---RUTA MÁS CORTA----");
+                    
                     break;
                     
                 case 6:
@@ -330,29 +327,6 @@ public class Sistema {
             }
         }
         return -1;
-    }
-
-    static void calcularYMostrarRuta(int[] filaPerimetro, int[] columnaPerimetro, int filaE, int columnaE, int filaS, int columnaS) {
-        int indiceEntrada = buscarIndiceEnPerimetro(filaPerimetro, columnaPerimetro, filaE, columnaE);
-        int indiceSalida = buscarIndiceEnPerimetro(filaPerimetro, columnaPerimetro, filaS, columnaS);
-        int total = filaPerimetro.length;
-
-        
-        int distanciaHoraria = (indiceSalida - indiceEntrada + total) % total;
-        int distanciaAntihoraria = (indiceEntrada - indiceSalida + total) % total;
-
-        System.out.println("Entrada [E]: fila " + filaE + ", columna " + columnaE);
-        System.out.println("Salida [S]: fila " + filaS + ", columna " + columnaS);
-        System.out.println("Distancia horaria por el borde: " + distanciaHoraria + " posiciones");
-        System.out.println("Distancia antihoraria por el borde: " + distanciaAntihoraria + " posiciones");
-
-        if (distanciaHoraria < distanciaAntihoraria) {
-            System.out.println("Ruta recomendada: sentido horario (" + distanciaHoraria + " posiciones)");
-        } else if (distanciaAntihoraria < distanciaHoraria) {
-            System.out.println("Ruta recomendada: sentido antihorario (" + distanciaAntihoraria + " posiciones)");
-        } else {
-            System.out.println("Ambas rutas tienen la misma distancia por el borde.");
-        }
     }
 } 
 

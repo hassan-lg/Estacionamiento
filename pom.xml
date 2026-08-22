@@ -26,6 +26,7 @@
                     <compilerArgs>
                         <!-- Desactiva la vista previa de características que activan el modo compacto -->
                         <arg>-Xlint:-preview</arg>
+                        <arg>-Xlint</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
